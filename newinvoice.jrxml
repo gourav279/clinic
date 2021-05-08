@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21676778-59c6-4983-95a6-65f369922048">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="parameter2" class="java.lang.String"/>
+	<parameter name="parameter3" class="java.lang.String"/>
+	<parameter name="parameter4" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<parameter name="parameter6" class="java.lang.String"/>
+	<parameter name="parameter7" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    *
+FROM
+     `prescription` prescription]]>
+	</queryString>
+	<field name="Prescriptionid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Patientid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Prescriptionimage" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="419" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="166" width="75" height="31" forecolor="#FFFFFF" uuid="a0d42f6f-54b7-4e34-9783-96db8d395f01"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S.No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="101" width="45" height="20" uuid="989784a8-7953-4cac-b68a-7a517a86d5e8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-1" y="0" width="555" height="97" backcolor="#333951" uuid="ab4075aa-4a93-4e73-b84f-bbe268389346"/>
+			</rectangle>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="452" y="101" width="100" height="20" uuid="8adce0f5-97a7-4fa5-94ad-e1cdf40c1cd3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<rectangle radius="10">
+				<reportElement x="0" y="168" width="555" height="31" backcolor="#393351" uuid="b8f4e4ec-43e6-464b-ad00-6bbd7e7a4258"/>
+			</rectangle>
+			<image scaleImage="FillFrame">
+				<reportElement positionType="FixRelativeToBottom" x="0" y="0" width="200" height="77" uuid="d80c282c-b7c1-4b5f-8869-2fb4a7304b04"/>
+				<imageExpression><![CDATA["logo dentalhouse.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="425" y="170" width="123" height="31" forecolor="#FFFFFF" uuid="a2c91759-8055-41a5-a0df-73869dd4f379"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="206" width="74" height="20" uuid="11c76050-39bc-4e12-bcd5-271e50444e8a"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="102" width="555" height="1" uuid="f08db8c2-eec2-4265-a23d-a2d4b96c189b"/>
+			</line>
+			<staticText>
+				<reportElement x="131" y="206" width="277" height="20" uuid="3ab204b7-7639-4b5d-8fda-e40d9df64178"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Treatment Fee]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-2" y="201" width="555" height="1" uuid="35ab8043-ea10-4b1a-9e85-08e9f4c07134"/>
+			</line>
+			<staticText>
+				<reportElement x="200" y="0" width="354" height="77" forecolor="#FFFFFF" uuid="c3ecd3e1-e898-4313-9b9d-1685c0553dfe"/>
+				<textElement>
+					<font size="58"/>
+				</textElement>
+				<text><![CDATA[Dental House]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="298" width="150" height="20" uuid="890332a7-27e8-4c22-8e25-2135e1211524"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Paid Amount:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="123" width="89" height="20" uuid="372e2ee1-c62f-4ae8-9083-031a3cd50305"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="318" width="150" height="20" uuid="7979a87e-ae9b-4adb-af6e-a6687593a195"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Remaining Amount:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="171" width="277" height="31" forecolor="#FFFFFF" uuid="4ab7c06b-530c-494d-9dc6-6ab9eeaf4282"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Discription]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-2" y="165" width="555" height="1" uuid="095c0c69-4090-4eb7-a407-f10c2312fcd3"/>
+			</line>
+			<staticText>
+				<reportElement x="275" y="278" width="150" height="20" uuid="f97223d0-56c7-431d-9c52-f62cf717651e"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="268" width="555" height="1" uuid="67468207-91e9-444d-982a-efa3570935d1"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="142" width="124" height="20" uuid="002a62c7-24b4-4d21-a767-15b2e2fe08a5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Mobile No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="238" width="277" height="20" uuid="57107eb7-ae28-4794-8ed4-b8034b028b66"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Check Up Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="238" width="74" height="20" uuid="e4d06ebf-4422-466e-a910-23cac6229fd7"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="77" width="553" height="20" forecolor="#FFFFFF" uuid="f7914c14-16b7-4ca5-94e0-8538abe495d4"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gate No 2, opp. Hanuman Mandir Ranital, Wright Town, Jabalpur, Madhya Pradesh 482002]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="435" y="298" width="100" height="20" uuid="2008ee2c-1340-4a8f-98d6-3c0c49dae3dd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="238" width="123" height="20" uuid="f788e7b8-1717-40dd-a563-f360cc90f221"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="278" width="100" height="20" uuid="98976181-fa82-49da-a7fd-7ffe4fbf1028"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="318" width="100" height="20" uuid="30be20f4-9627-462a-8861-9cb2c9bf3d22"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="206" width="123" height="20" uuid="d75828fb-1563-4c90-9c5d-d83ba0b6e0ab"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="123" width="210" height="20" uuid="cc3d3f3b-7508-417c-b399-2b093661002a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="142" width="175" height="20" uuid="6def4148-76e6-435e-9189-c8f3c2b53778"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="376" y="123" width="74" height="20" uuid="e927f93b-da49-4e94-8976-d66804ccd232"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Id:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="451" y="142" width="100" height="20" uuid="0d749cb4-63b9-42d9-8755-df61dfbb38ab"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="451" y="123" width="100" height="20" uuid="f537a64c-0a64-4a40-b0a6-6f64d1b45f54"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="317" y="141" width="134" height="20" uuid="625c6620-f7eb-4e11-b491-ab1fca5d91af"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Registration Number:]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

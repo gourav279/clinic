@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dental.ShiftController">
+   <children>
+      <JFXComboBox fx:id="doctor" layoutX="247.0" layoutY="68.0" prefHeight="25.0" prefWidth="197.0" promptText="Enter the Doctor" />
+      <Label layoutX="106.0" layoutY="72.0" text="Doctor">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTimePicker fx:id="shift1s" layoutX="247.0" layoutY="116.0" onAction="#timeStart" prefHeight="25.0" prefWidth="94.0" />
+      <Label layoutX="106.0" layoutY="119.0" prefHeight="20.0" prefWidth="53.0" text="Shift-1">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTimePicker fx:id="shift1e" layoutX="383.0" layoutY="117.0" onAction="#timeEnd" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="106.0" layoutY="166.0" prefHeight="20.0" prefWidth="53.0" text="Shift-2">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="106.0" layoutY="214.0" prefHeight="20.0" prefWidth="53.0" text="Shift-3">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="272.0" layoutY="275.0" onAction="#sumit" style="-fx-background-color: green;" text="Sumit" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="352.0" layoutY="121.0" text="to" />
+      <JFXTimePicker fx:id="shift2s" layoutX="248.0" layoutY="161.0" onAction="#timeStart2" prefHeight="25.0" prefWidth="94.0" />
+      <JFXTimePicker fx:id="shift2e" layoutX="384.0" layoutY="162.0" onAction="#timeEnd2" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="353.0" layoutY="166.0" text="to" />
+      <JFXTimePicker fx:id="shift3s" layoutX="249.0" layoutY="205.0" onAction="#timeStart3" prefHeight="25.0" prefWidth="94.0" />
+      <JFXTimePicker fx:id="shift3e" layoutX="385.0" layoutY="206.0" onAction="#timeEnd3" prefHeight="25.0" prefWidth="100.0" />
+      <Label layoutX="354.0" layoutY="210.0" text="to" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dental.AccountantDashController">
+    <children>
+        <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <AnchorPane id="AnchorPane" layoutX="-10.0" layoutY="-10.0" prefHeight="715.0" prefWidth="1315.0" style="-fx-background-color: #2f2b43;" stylesheets="@admin.css">
+                    <children>
+                        <Pane layoutX="414.0" layoutY="499.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="42.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(2).png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="vocherbtn" layoutX="29.0" layoutY="147.0" mnemonicParsing="false" style="-fx-background-radius: 50;" text="Vocher Create" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="714.0" layoutY="509.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="42.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(2).png" />
+                                    </image>
+                                </ImageView>
+                                <Button fx:id="vocherlistbtn" layoutX="19.0" layoutY="147.0" mnemonicParsing="false" style="-fx-background-radius: 50;" text="Vocher List View" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <AnchorPane prefHeight="700.0" prefWidth="328.0" style="-fx-background-color: #393351;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox layoutY="304.0" prefHeight="396.0" prefWidth="326.0">
+                                    <children>
+                                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleProfile" prefHeight="46.0" prefWidth="323.0" text="Profile" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="66.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@image/user.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets left="3.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                        <Button fx:id="log_btn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#logOut" prefHeight="77.0" prefWidth="326.0" text="Log Out" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                            <graphic>
+                                                <ImageView fitHeight="66.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@image/settings.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                            <VBox.margin>
+                                                <Insets left="3.0" />
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                                <ImageView fitHeight="168.0" fitWidth="200.0" layoutX="72.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/account.png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="28.0" layoutY="229.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="300.0" style="-fx-background-color: #fa2c56;" text="Accountant" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <Pane fx:id="rec" layoutX="1000.0" layoutY="509.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="42.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/edit.png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="56.0" layoutY="147.0" mnemonicParsing="false" onAction="#handelrecords" style="-fx-background-radius: 50;" text="Records" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="714.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="42.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(2).png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="3.0" layoutY="143.0" mnemonicParsing="false" onAction="#duedebitpaneshow" style="-fx-background-radius: 50;" text="Due Debit transactions" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="415.0" layoutY="270.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="42.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(2).png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="22.0" layoutY="147.0" mnemonicParsing="false" onAction="#newpurchasepaneshow" style="-fx-background-radius: 50;" text="New Purchase" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="415.0" layoutY="34.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="42.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(2).png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="22.0" layoutY="147.0" mnemonicParsing="false" onAction="#paymentpaneshow" style="-fx-background-radius: 50;" text="Active Payments" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="1014.0" layoutY="34.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="128.0" fitWidth="148.0" layoutX="32.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(4).png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="5.0" layoutY="142.0" mnemonicParsing="false" onAction="#transctionWindow" style="-fx-background-radius: 50;" text="All Credit transaction " textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="714.0" layoutY="34.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="120.0" fitWidth="136.0" layoutX="42.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(2).png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="36.0" layoutY="143.0" mnemonicParsing="false" onAction="#emiWindow" style="-fx-background-radius: 50;" text="Due Payments" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="1009.0" layoutY="277.0" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
+                            <children>
+                                <ImageView fitHeight="128.0" fitWidth="148.0" layoutX="32.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/attendace%20(4).png" />
+                                    </image>
+                                </ImageView>
+                                <Button layoutX="5.0" layoutY="142.0" mnemonicParsing="false" onAction="#debithistorypaneshow" style="-fx-background-radius: 50;" text="All Debit transactions " textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <AnchorPane fx:id="vocherlistpane" layoutX="332.0" layoutY="2.0" prefHeight="727.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false">
+                            <children>
+                                <TableView fx:id="vochertable" layoutX="67.0" layoutY="101.0" prefHeight="573.0" prefWidth="775.0">
+                                    <columns>
+                                        <TableColumn fx:id="tpaidto" prefWidth="217.0" text="Paid To" />
+                                        <TableColumn fx:id="tpaidfor" prefWidth="171.0" text="Paid For" />
+                                        <TableColumn fx:id="tdate" prefWidth="209.0" text="Date" />
+                                        <TableColumn fx:id="tamount" prefWidth="177.0" text="Amount" />
+                                    </columns>
+                                </TableView>
+                                <Button fx:id="backvochertable" layoutX="72.0" layoutY="44.0" mnemonicParsing="false" text="Back" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="vocherpane" layoutX="332.0" layoutY="2.0" prefHeight="727.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false">
+                            <children>
+                                <TextField fx:id="paidto" layoutX="228.0" layoutY="172.0" prefHeight="38.0" prefWidth="221.0" />
+                                <Text fill="WHITE" layoutX="347.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vocher Create">
+                                    <font>
+                                        <Font name="System Bold" size="30.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="WHITE" layoutX="91.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid To:">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="paidfor" layoutX="229.0" layoutY="233.0" prefHeight="38.0" prefWidth="221.0" />
+                                <Text fill="WHITE" layoutX="89.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paid for:">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="WHITE" layoutX="104.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Text>
+                                <DatePicker fx:id="vocdate" layoutX="229.0" layoutY="295.0" prefHeight="38.0" prefWidth="224.0" />
+                                <Text fill="WHITE" layoutX="86.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="vocamount" layoutX="230.0" layoutY="356.0" prefHeight="38.0" prefWidth="223.0" />
+                                <Button fx:id="printvocherbtn" layoutX="203.0" layoutY="461.0" mnemonicParsing="false" style="-fx-background-radius: 50;" text="Print" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="backvocher" layoutX="70.0" layoutY="66.0" mnemonicParsing="false" text="Back" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="recordpane" layoutX="332.0" layoutY="2.0" prefHeight="727.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false">
+                     <children>
+                        <Text fill="WHITE" layoutX="103.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Transction record of one day">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="104.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customise day record ">
+                           <font>
+                              <Font name="System Bold" size="35.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="selectdate" layoutX="285.0" layoutY="164.0" prefHeight="48.0" prefWidth="245.0" style="-fx-background-color: white;" />
+                        <Text fill="WHITE" layoutX="131.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="getrecords" layoutX="652.0" layoutY="169.0" mnemonicParsing="false" style="-fx-background-radius: 50;" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Text fill="WHITE" layoutX="137.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="from" layoutX="288.0" layoutY="373.0" prefHeight="48.0" prefWidth="245.0" style="-fx-background-color: white;" />
+                        <Text fill="WHITE" layoutX="137.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Date:">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="to" layoutX="288.0" layoutY="478.0" prefHeight="48.0" prefWidth="245.0" style="-fx-background-color: white;" />
+                        <Text fill="WHITE" layoutX="404.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="getrecords1" layoutX="347.0" layoutY="599.0" mnemonicParsing="false" style="-fx-background-radius: 50;" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="recordback" layoutX="805.0" layoutY="75.0" mnemonicParsing="false" text="Back" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="newpurchasepane" layoutX="332.0" layoutY="2.0" prefHeight="727.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false">
+                            <children>
+                                <Button layoutX="876.0" layoutY="14.0" mnemonicParsing="false" onAction="#backpane5" style="-fx-background-radius: 30;" text="Back" textFill="#f8f7f7">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <ComboBox fx:id="comboPN" editable="true" layoutX="101.0" layoutY="202.0" prefHeight="44.0" prefWidth="318.0" />
+                                <TextField fx:id="textQt" layoutX="429.0" layoutY="202.0" prefHeight="44.0" prefWidth="125.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="textP" layoutX="566.0" layoutY="202.0" prefHeight="44.0" prefWidth="125.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </TextField>
+                                <TextField fx:id="textA" layoutX="705.0" layoutY="202.0" prefHeight="44.0" prefWidth="125.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </TextField>
+                                <Button fx:id="btnPlus" layoutX="848.0" layoutY="201.0" mnemonicParsing="false" style="-fx-background-radius: 30;" text="+" textFill="#fcf9f9">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Button>
+                                <Text fill="WHITE" layoutX="101.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product name:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="WHITE" layoutX="428.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qty:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="WHITE" layoutX="566.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="WHITE" layoutX="705.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <TableView fx:id="tableproduct" layoutX="101.0" layoutY="268.0" prefHeight="249.0" prefWidth="797.0">
+                                    <columns>
+                                        <TableColumn fx:id="colProName" prefWidth="327.0" text="Product Name" />
+                                        <TableColumn fx:id="colQTY" prefWidth="137.0" text="Qty" />
+                                        <TableColumn fx:id="colProPrice" prefWidth="132.0" text="Price" />
+                                        <TableColumn fx:id="colProAmout" prefWidth="136.0" text="Amount" />
+                                        <TableColumn fx:id="colProbtn" prefWidth="64.0" />
+                                    </columns>
+                                </TableView>
+                                <Text fill="WHITE" layoutX="556.0" layoutY="554.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amount:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="WHITE" layoutX="540.0" layoutY="598.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paying Amount:">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Text>
+                                <Button layoutX="699.0" layoutY="624.0" mnemonicParsing="false" onAction="#submitaction" prefHeight="44.0" prefWidth="200.0" style="-fx-background-radius: 30;" text="Submit " textFill="#fcf9f9">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Button>
+                                <AnchorPane layoutX="89.0" layoutY="78.0" prefHeight="77.0" prefWidth="807.0" style="-fx-background-radius: 15;" styleClass="mainFxmlClass">
+                                    <children>
+                                        <Text fill="WHITE" layoutX="14.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distributer Name:">
+                                            <font>
+                                                <Font name="System Bold" size="20.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="disName" layoutX="193.0" layoutY="17.0" prefHeight="44.0" prefWidth="231.0">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </TextField>
+                                        <Text fill="WHITE" layoutX="446.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No.:">
+                                            <font>
+                                                <Font name="System Bold" size="20.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="disNumber" layoutX="562.0" layoutY="17.0" prefHeight="44.0" prefWidth="231.0">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </TextField>
+                                    </children>
+                                </AnchorPane>
+                                <Label fx:id="lblDTA" layoutX="746.0" layoutY="537.0" prefHeight="30.0" prefWidth="110.0" textFill="#f8f7f7">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="lblCPA" layoutX="737.0" layoutY="568.0" prefHeight="44.0" prefWidth="125.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </TextField>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="profilePane" layoutX="489.0" layoutY="120.0" prefHeight="413.0" prefWidth="611.0" style="-fx-background-color: #524A7B; -fx-background-radius: 50;" stylesheets="@admin.css" visible="false">
+                            <children>
+                                <Pane layoutX="32.0" layoutY="33.0" prefHeight="351.0" prefWidth="318.0" style="-fx-background-color: #393351; -fx-background-radius: 50 50 50 50;">
+                                    <children>
+                                        <Label layoutX="24.0" layoutY="52.0" text="Name:" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="24.0" layoutY="90.0" text="Moblie No.:" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="27.0" layoutY="127.0" text="Email:" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="27.0" layoutY="185.0" text="Branch:" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Button contentDisplay="CENTER" layoutX="67.0" layoutY="239.0" mnemonicParsing="false" onAction="#changeWindow" prefHeight="39.0" prefWidth="185.0" style="-fx-background-radius: 50 50 50 50;" text="Change Password" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="17.0" />
+                                            </font>
+                                        </Button>
+                                        <Button contentDisplay="CENTER" layoutX="78.0" layoutY="278.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="39.0" prefWidth="163.0" style="-fx-background-radius: 50 50 50 50;" text="Close" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="17.0" />
+                                            </font>
+                                        </Button>
+                                        <Label fx:id="name" layoutX="81.0" layoutY="54.0" text="Gourav Patel" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="moblie" layoutX="126.0" layoutY="92.0" text="0987654321" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="email2" layoutX="78.0" layoutY="127.0" text="gouravpatel@gmail.com" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="branch" layoutX="91.0" layoutY="187.0" text="Ranital" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="25.0" layoutY="159.0" text="Address:" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="address" layoutX="97.0" layoutY="160.0" text="Ranital" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Pane fx:id="changePane" layoutY="-4.0" prefHeight="360.0" prefWidth="318.0" style="-fx-background-radius: 50;" styleClass="mainFxmlClass" visible="false">
+                                            <children>
+                                                <Button layoutX="77.0" layoutY="221.0" mnemonicParsing="false" onAction="#ForgetWindow" prefHeight="37.0" prefWidth="149.0" style="-fx-background-radius: 30;" text="Submit" textFill="WHITE">
+                                                    <font>
+                                                        <Font size="16.0" />
+                                                    </font>
+                                                </Button>
+                                                <Button layoutX="77.0" layoutY="274.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="37.0" prefWidth="149.0" style="-fx-background-radius: 30;" text="Back" textFill="WHITE">
+                                                    <font>
+                                                        <Font size="16.0" />
+                                                    </font>
+                                                </Button>
+                                                <PasswordField layoutX="77.0" layoutY="86.0" promptText="Enter New Password" />
+                                                <PasswordField layoutX="77.0" layoutY="155.0" promptText="Re-Enter New Password" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </Pane>
+                                <ImageView fitHeight="301.0" fitWidth="237.0" layoutX="355.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@image/user.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                  
+                        <AnchorPane fx:id="transctionList" prefHeight="715.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button layoutX="801.0" layoutY="26.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="39.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Back" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                                <TableView fx:id="txList" layoutX="11.0" layoutY="82.0" prefHeight="602.0" prefWidth="912.0">
+                                    <columns>
+                                        <TableColumn fx:id="colididid" minWidth="0.0" prefWidth="0.0" visible="false" />
+                                        <TableColumn fx:id="col_name" prefWidth="174.0" text="Name" />
+                                        <TableColumn fx:id="col_mob" prefWidth="151.0" text="Mobile" />
+                                        <TableColumn fx:id="col_mail" prefWidth="224.0" text="Email" />
+                                        <TableColumn fx:id="col_date" prefWidth="83.0" text="Date" />
+                                        <TableColumn fx:id="col_time" minWidth="0.0" prefWidth="66.0" text="Time" />
+                                        <TableColumn fx:id="col_total_amount" prefWidth="95.0" text="Total Amount" />
+                                        <TableColumn fx:id="colinvoice" prefWidth="118.0" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="filterField" layoutX="309.0" layoutY="33.0" promptText="Search" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="emiPane" layoutX="322.0" layoutY="-1.0" prefHeight="715.0" prefWidth="984.0" style="-fx-background-color: #2f2b43;" visible="false" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="-1.0">
+                            <children>
+                                <Button layoutX="801.0" layoutY="26.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="39.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Back" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                                <TableView fx:id="emiList" layoutX="11.0" layoutY="82.0" prefHeight="602.0" prefWidth="912.0">
+                                    <columns>
+                                        <TableColumn fx:id="col_name1" prefWidth="133.0" text="Name" />
+                                        <TableColumn fx:id="col_mob1" prefWidth="112.0" text="Mobile" />
+                                        <TableColumn fx:id="col_mail1" prefWidth="198.0" text="Email" />
+                                        <TableColumn fx:id="col_total_amount1" prefWidth="131.0" text="Total Amount" />
+                                        <TableColumn fx:id="colpamount" prefWidth="103.0" text="Paid Amount" />
+                                        <!--<TableColumn fx:id="col_paid_amount" prefWidth="121.0" text="Paid Amount" />-->
+                                        <TableColumn fx:id="col_due_amount1" prefWidth="104.0" text="Due Amount" />
+                                        <TableColumn fx:id="button" prefWidth="130.0" text="Action" />
+                                        <TableColumn fx:id="coleid" minWidth="0.0" prefWidth="0.0" visible="false" />
+                                        <TableColumn fx:id="colidid" prefWidth="75.0" text="Column X" visible="false" />
+                                    </columns>
+                                </TableView>
+                                <AnchorPane fx:id="adjustE" layoutX="255.0" layoutY="158.0" prefHeight="377.0" prefWidth="365.0" styleClass="mainFxml2Class" visible="false">
+                                    <children>
+                                        <Text fill="#f8f8f8" layoutX="14.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient name:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="#f8f8f8" layoutX="14.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="#f8f8f8" layoutX="14.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="#f8f8f8" layoutX="14.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Amount:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="#f8f8f8" layoutX="16.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paying Amount:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="txtPPAN" layoutX="173.0" layoutY="239.0" prefHeight="39.0" prefWidth="120.0">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <Label fx:id="lblPDAN" layoutX="183.0" layoutY="189.0" text="Label" textFill="#eeecec">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblDPNN" layoutX="152.0" layoutY="43.0" text="Label" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblPMNN" layoutX="152.0" layoutY="92.0" text="Label" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblPEN" layoutX="152.0" layoutY="141.0" text="Label" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="btnSC" layoutX="20.0" layoutY="309.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-background-radius: 50;" text="Save" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnBC" layoutX="194.0" layoutY="309.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="128.0" style="-fx-background-radius: 50;" text="Back" textFill="WHITE">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paymentpane" layoutX="331.0" layoutY="-8.0" prefHeight="727.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false">
+                            <children>
+                                <Button layoutX="850.0" layoutY="14.0" mnemonicParsing="false" onAction="#backpane" prefHeight="39.0" prefWidth="118.0" style="-fx-background-radius: 50;" text="Back" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Button>
+                                <TableView fx:id="tblPayment" layoutX="17.0" layoutY="58.0" prefHeight="351.0" prefWidth="954.0">
+                                    <columns>
+                                        <TableColumn fx:id="colAid" prefWidth="47.0" text="Id" />
+                                        <TableColumn fx:id="colPName" prefWidth="163.0" text="Patient Name" />
+                                        <TableColumn fx:id="colMno" prefWidth="171.0" text="Mobile No." />
+                                        <TableColumn fx:id="colTdate" prefWidth="106.0" text="Date" />
+                                        <TableColumn fx:id="colTA" prefWidth="194.0" text="Treatment Amont" />
+                                        <TableColumn fx:id="colPS" prefWidth="152.0" text="Payment Status" />
+                                        <TableColumn fx:id="colpbtn" prefWidth="195.0" />
+                                    </columns>
+                                </TableView>
+                                <Text fill="#f8f7f7" layoutX="60.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <Label fx:id="lblname" layoutX="170.0" layoutY="425.0" text="Label" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Text fill="#f8f7f7" layoutX="60.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No.:">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <Label fx:id="lblnumber" layoutX="170.0" layoutY="481.0" text="Label" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Text fill="#f8f7f7" layoutX="52.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treatment Price:">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <Label fx:id="lblamount" layoutX="238.0" layoutY="542.0" text="Label" textFill="WHITE">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Label>
+                                <Text fill="#f8f7f7" layoutX="52.0" layoutY="624.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check Up Fee:">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Text>
+                                <TextField fx:id="textCheckUp" layoutX="238.0" layoutY="594.0" prefHeight="44.0" prefWidth="92.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </TextField>
+                                <Text fill="#fcf8f8" layoutX="619.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amount:">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Text>
+                                <Button layoutX="330.0" layoutY="589.0" mnemonicParsing="false" onAction="#addCUF" style="-fx-background-radius: 50;" text="+" textFill="#f8f7f7">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                </Button>
+                                <Label fx:id="lbltamount" layoutX="808.0" layoutY="466.0" text="Label" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Button layoutX="733.0" layoutY="616.0" mnemonicParsing="false" onAction="#printinvoice" prefHeight="54.0" prefWidth="200.0" style="-fx-background-radius: 50;" text="Print Invoice" textFill="#f8f7f7">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                </Button>
+                                <TextField fx:id="textpayamount" layoutX="807.0" layoutY="514.0" prefHeight="44.0" prefWidth="102.0">
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </TextField>
+                                <Text fill="#fcf8f8" layoutX="621.0" layoutY="545.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paying Amount:">
+                                    <font>
+                                        <Font name="System Bold" size="24.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="duedebitpane" layoutX="332.0" prefHeight="727.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false">
+                            <children>
+                                <Button layoutX="876.0" layoutY="14.0" mnemonicParsing="false" onAction="#backpane2" style="-fx-background-radius: 30;" text="Back" textFill="#f8f7f7">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <TableView fx:id="dd_list" layoutX="60.0" layoutY="88.0" prefHeight="588.0" prefWidth="836.0">
+                                    <columns>
+                                        <TableColumn fx:id="ddid" prefWidth="46.0" text="Id" />
+                                        <TableColumn fx:id="dd_dn" prefWidth="192.0" text="Distributor Name " />
+                                        <TableColumn fx:id="dd_num" minWidth="9.0" prefWidth="162.0" text="Mobile No." />
+                                        <TableColumn fx:id="dd_ta" minWidth="9.0" prefWidth="100.0" text="Total Amount" />
+                                        <TableColumn fx:id="dd_pn" prefWidth="121.0" text="Paid Amount " />
+                                        <TableColumn fx:id="dd_da" prefWidth="97.0" text="Due Amount" />
+                                        <TableColumn fx:id="colcreditbtn" prefWidth="117.0" />
+                                    </columns>
+                                </TableView>
+                                <AnchorPane fx:id="paneDDT" layoutX="227.0" layoutY="85.0" prefHeight="285.0" prefWidth="275.0" style="-fx-background-radius: 20;" styleClass="mainFxmlClass" visible="false" AnchorPane.topAnchor="185.0">
+                                    <children>
+                                        <Text fill="#f8f5f5" layoutX="15.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Amonut:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <TextField fx:id="textDPA" layoutX="13.0" layoutY="178.0" prefHeight="39.0" prefWidth="250.0" style="-fx-background-radius: 20;">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </TextField>
+                                        <Button fx:id="btnDS" layoutX="15.0" layoutY="226.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="120.0" style="-fx-background-radius: 30;" text="Save" textFill="#fcfcfc">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="btnDB" layoutX="160.0" layoutY="226.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="102.0" style="-fx-background-radius: 30;" text="Back" textFill="#fcfcfc">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Button>
+                                        <Text fill="#f8f5f5" layoutX="13.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="#f8f5f5" layoutX="13.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile No.:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fill="#f8f5f5" layoutX="15.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Paying Amonut:">
+                                            <font>
+                                                <Font name="System Bold" size="18.0" />
+                                            </font>
+                                        </Text>
+                                        <Label fx:id="lblDN" layoutX="83.0" layoutY="26.0" text="Label" textFill="#f5f4f4">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblDMN" layoutX="117.0" layoutY="66.0" text="Label" textFill="#f5f4f4">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="lblDDA" layoutX="151.0" layoutY="103.0" text="Label" textFill="#f5f4f4">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="debithistorypane" layoutX="332.0" prefHeight="727.0" prefWidth="984.0" styleClass="mainFxml2Class" visible="false">
+                            <children>
+                                <Button layoutX="876.0" layoutY="14.0" mnemonicParsing="false" onAction="#backpane3" style="-fx-background-radius: 30;" text="Back" textFill="#f8f7f7">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                                <TableView fx:id="th_list" layoutX="60.0" layoutY="88.0" prefHeight="588.0" prefWidth="836.0">
+                                    <columns>
+                                        <TableColumn fx:id="th_dn" prefWidth="167.0" text="Distributor Name " />
+                                        <TableColumn fx:id="th_num" minWidth="9.0" prefWidth="148.0" text="Number" />
+                                        <TableColumn fx:id="th_dt" prefWidth="195.0" text="Date" />
+                                        <TableColumn fx:id="th_tt" prefWidth="143.0" text="Time" />
+                                        <TableColumn fx:id="th_am" minWidth="9.0" prefWidth="182.0" text="Amount" />                            
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="bankpane" layoutX="351.0" prefHeight="727.0" prefWidth="965.0" styleClass="mainFxml2Class" visible="false">
+                            <children>
+                                <Button layoutX="876.0" layoutY="14.0" mnemonicParsing="false" onAction="#backpane4" style="-fx-background-radius: 30;" text="Back" textFill="#f8f7f7">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                        
+                  
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

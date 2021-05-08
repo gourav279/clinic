@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="47ead26b-e046-461c-8fea-a9588b2892d9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="parameter1" class="java.lang.String"/>
+	<parameter name="parameter2" class="java.lang.String"/>
+	<parameter name="parameter3" class="java.lang.String"/>
+	<parameter name="parameter4" class="java.lang.String"/>
+	<parameter name="parameter5" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     *
+FROM
+     `appointment` appointment]]>
+	</queryString>
+	<field name="Appointmentid" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PatientName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="patientId" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="note" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Branch" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="patienttype" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="224" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="2" width="555" height="97" backcolor="#333951" uuid="99710e7b-16d2-44c3-a956-84552c6f7695"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="201" y="2" width="354" height="77" forecolor="#FFFFFF" uuid="deaee059-4c80-4f4d-9f69-e7fb81011ea6"/>
+				<textElement>
+					<font size="58"/>
+				</textElement>
+				<text><![CDATA[Dental House]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="79" width="555" height="20" forecolor="#FFFFFF" uuid="b86637a9-5ad6-4178-86c9-b31f3634e31c"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gate No 2, opp. Hanuman Mandir Ranital, Wright Town, Jabalpur, Madhya Pradesh 482002]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement positionType="FixRelativeToBottom" x="1" y="5" width="200" height="77" uuid="1226a873-bf0e-4d6e-8cd5-dc5dc762d299"/>
+				<imageExpression><![CDATA["logo dentalhouse.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="1" y="115" width="85" height="20" uuid="3cf03b37-0974-4126-8628-9f0f86e46358"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Patient Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="142" width="85" height="20" uuid="da338b95-0b4c-4d28-8d90-aa3de7de394a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Patient Age:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="169" width="104" height="20" uuid="be39f354-65c8-4598-b6ce-1765aaa91847"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Patient Mobile No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="197" width="60" height="20" uuid="1671ec15-f711-482b-a20a-d10e17c87a72"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="115" width="43" height="20" uuid="0e431cc2-1eb9-4603-89a7-e93fa5e0db5a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="162" width="92" height="27" uuid="8c5323fb-55d3-40ef-abae-e08644ed2fbf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paid Amount:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="433" y="115" width="122" height="20" uuid="ad127ec3-e9f1-4bb8-a448-052678dbd6f9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="115" width="115" height="20" uuid="b8e937a2-60f5-4554-b24c-66e8056f7464"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="142" width="138" height="20" uuid="8e76d3de-02a1-4e9b-ba5d-c84e2596c97b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="105" y="169" width="138" height="20" uuid="1ff8caeb-a459-4a14-99a1-c568379b2034"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="61" y="197" width="291" height="20" uuid="f49039fd-7ced-4c95-9a9d-011f23e3ac94"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="162" width="100" height="27" uuid="cd43ccf9-588f-4385-b95d-33233c25d1ec"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{parameter5}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

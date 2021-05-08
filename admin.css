@@ -1,0 +1,98 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    -fx-background-color: #393351;
+}
+.mainFxml2Class{
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 30;
+}
+.button2{
+    -fx-background-color: #393351;
+    -fx-background-radius: 5 5 5 5;
+}
+.button2:hover{
+    -fx-background-color: #524A7B;
+    -fx-background-radius:  5 5 5 5;
+}
+.button:pressed{
+    -fx-background-color: #2F3B43;
+    -fx-background-radius:  5 5 5 5;
+}
+.pane2:hover{
+    -fx-background-color: #524A7B;
+    -fx-background-radius:  50 0 0 50;
+}
+.pane2{
+    -fx-background-color: #393351;
+    -fx-background-radius: 50 0 0 50;
+}
+.pane:hover{
+    -fx-background-color: #524A7B;
+    -fx-background-radius:  50 0 0 50;
+}
+.pane{
+    -fx-background-color: #393351;
+    -fx-background-radius:  50 0 0 50;
+}
+.pane:pressed{
+    -fx-background-color: #2F3B43;
+    -fx-background-radius:  50 50 50 50;
+}
+.tableView{
+    -fx-background-color: #524A7B;
+    -fx-background-radius:  0 0 50 50;
+    -fx-text-fill: white;
+    -fx-font-size: 12;
+  
+}
+.comboBox{
+    -fx-background-color: #524A7B;
+    -fx-background-radius:  5 5 5 5;
+     color: white;
+}
+
+.button{
+    -fx-background-color: #393351;
+    -fx-background-radius: 50 0 0 50;
+}
+.button:hover{
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 50 0 0 50;
+}
+.button:pressed{
+    -fx-background-color: #2F3B43;
+    -fx-background-radius: 50 0 0 50;
+}
+.pane2:hover{
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 50 50 50 50;
+}
+.pane2{
+    -fx-background-color: #393351;
+    -fx-background-radius: 50 50 50 50;
+}
+.pane:hover{
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 50 50 50 50;
+}
+.pane{
+    -fx-background-color: #393351;
+    -fx-background-radius: 50 50 50 50;
+}
+.pane:pressed{
+    -fx-background-color: #2F3B43;
+    -fx-background-radius: 50 50 50 50;
+}
+.tableView{
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 50 50 50 50;
+}
+.comboBox{
+    -fx-background-color: #524A7B;
+    -fx-background-radius: 50 50 50 50;
+    color: white;
+}
+

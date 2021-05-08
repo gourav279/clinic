@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e3086731-b550-454e-9a81-ede9b18553fe">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="pname" class="java.lang.String"/>
+	<parameter name="pmobileno" class="java.lang.String"/>
+	<parameter name="page" class="java.lang.String"/>
+	<parameter name="paddress" class="java.lang.String"/>
+	<parameter name="rid" class="java.lang.String"/>
+	<parameter name="pid" class="java.lang.String"/>
+	<field name="mname" class="java.lang.String"/>
+	<field name="mdosages" class="java.lang.String"/>
+	<field name="mfrequency" class="java.lang.String"/>
+	<field name="mduration" class="java.lang.String"/>
+	<field name="mnote" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="264" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="87" width="554" height="20" forecolor="#FFFFFF" uuid="65a26c75-3217-4bd1-b8bc-2c6166d5bca9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gate No 2, opp. Hanuman Mandir Ranital, Wright Town, Jabalpur, Madhya Pradesh 482002]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="10" width="332" height="77" forecolor="#FFFFFF" uuid="943e2c04-d309-4912-82db-2d6df6ffe881"/>
+				<textElement>
+					<font size="48"/>
+				</textElement>
+				<text><![CDATA[Dental House]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="1" width="555" height="97" backcolor="#333951" uuid="03c4d280-4c1e-4ea2-b471-b458c2bfb146"/>
+			</rectangle>
+			<image scaleImage="FillFrame">
+				<reportElement positionType="FixRelativeToBottom" x="2" y="1" width="200" height="77" uuid="a6fa8bed-fc80-4c4b-803b-149529f64401"/>
+				<imageExpression><![CDATA["logo dentalhouse.png"]]></imageExpression>
+			</image>
+			<rectangle radius="10">
+				<reportElement x="0" y="227" width="555" height="31" backcolor="#393351" uuid="7ddd3ede-e028-4a28-a703-3e6bac091aed"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="1" y="228" width="154" height="31" forecolor="#FFFFFF" uuid="c1bf487d-8864-471f-b580-167077fea13c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Medicine Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="228" width="100" height="31" forecolor="#FFFFFF" uuid="67294d83-5220-41d0-9786-bd806f02a652"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dosages]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="228" width="100" height="31" forecolor="#FFFFFF" uuid="84d98e9c-bfcd-4fc0-aea3-5bdf3c8f2ddf"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Frequency]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="228" width="100" height="31" forecolor="#FFFFFF" uuid="8606ed28-bca7-496b-a70f-4a8926bb4575"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Duration]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="228" width="100" height="31" forecolor="#FFFFFF" uuid="408da06f-8f1e-4c74-b750-ad325f1ec053"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Note]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="122" width="189" height="20" uuid="1aad1b18-b7e5-459c-af4c-5da26331240a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="146" width="153" height="20" uuid="2f6eeee4-1c66-4dce-a069-03e1e317961b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pmobileno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="170" width="100" height="20" uuid="0544ab54-292b-4a41-bafa-edb15294072d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{page}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="108" y="193" width="276" height="20" uuid="a0989327-acea-4a62-b605-26417e81599b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{paddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="122" width="89" height="20" uuid="d5e22a7b-4b8f-42e3-aa29-736d3da153eb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="169" width="89" height="20" uuid="034b535f-40bb-4463-b2e2-f76d41e5293e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Age:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="193" width="108" height="20" uuid="477208fc-ffa3-47c7-b03c-1b9e0e740669"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Address:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="145" width="123" height="20" uuid="6d20d8b4-8142-4c8e-a458-167ef8e05e56"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Mobile No.:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="455" y="102" width="100" height="20" uuid="eb53231e-3404-4a08-899d-de555fefbc5c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="412" y="102" width="45" height="20" uuid="f2325ceb-1a73-4f5f-916d-fae602306c71"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Date:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="260" width="555" height="1" uuid="f901f671-c5f4-432e-9696-603007fb0b3c"/>
+			</line>
+			<staticText>
+				<reportElement x="202" y="1" width="354" height="77" forecolor="#FFFFFF" uuid="dce9d0f7-7abe-49e7-98b3-b20d3075f660"/>
+				<textElement>
+					<font size="58"/>
+				</textElement>
+				<text><![CDATA[Dental House]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="78" width="553" height="20" forecolor="#FFFFFF" uuid="2f5a88ff-58c8-4582-8b77-097966393535"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Gate No 2, opp. Hanuman Mandir Ranital, Wright Town, Jabalpur, Madhya Pradesh 482002]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="224" width="555" height="1" uuid="543b2c21-14fc-4218-b76d-99aeec7694a5"/>
+			</line>
+			<line>
+				<reportElement x="0" y="101" width="555" height="1" uuid="742cac98-3143-49c8-84ab-2aa2102d6268"/>
+			</line>
+			<staticText>
+				<reportElement x="305" y="139" width="137" height="20" uuid="ac3f03b5-e0ec-48f4-b904-15786bd2977d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Registration Number:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="305" y="165" width="137" height="20" uuid="9fe14ee1-e498-460a-99cd-b2b828340458"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Patient Id:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="442" y="142" width="114" height="20" uuid="0a7f7b04-a10e-4126-a7d7-5ededa4627cc"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="443" y="165" width="100" height="20" uuid="386f7a86-9274-451f-b419-d3ddfb465164"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{pid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="271">
+			<textField>
+				<reportElement x="0" y="2" width="155" height="20" uuid="35a8cfd9-3b11-4750-8695-2faa07b970ca"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="2" width="100" height="20" uuid="99fe4474-472a-45be-a829-06cded8330ee"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mfrequency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="2" width="100" height="20" uuid="4079e1d7-b90f-49f1-af7c-03841f18b9a0"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mduration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="2" width="100" height="20" uuid="cb906563-9574-4f36-8495-e92df6ea8665"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mnote}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="2" width="100" height="20" uuid="4899314a-5925-412f-b65a-ee6b5eef61d7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mdosages}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="22" width="555" height="1" uuid="23b3549f-314c-4c0a-8c7a-8f7e963a1f14"/>
+			</line>
+			<staticText>
+				<reportElement x="455" y="90" width="39" height="20" uuid="004feff9-211e-4216-9218-2b923a075b54"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sign]]></text>
+			</staticText>
+			<line>
+				<reportElement x="413" y="80" width="127" height="1" uuid="02df7218-5d22-4a8b-b2e7-c9cfdb620ac3"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
